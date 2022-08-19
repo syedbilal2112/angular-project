@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute, Router } from "@angular/router";
+import { UserProfileService } from "../user.service";
 
 @Component({
   selector: 'app-child1',
@@ -9,14 +10,24 @@ import { ActivatedRoute, Router } from "@angular/router";
 })
 export class Child1Component implements OnInit {
 
+  
   constructor(
-    private router: Router
+    private router: Router,
+    private userService: UserProfileService
   ) { }
 
+  users : any;
   ngOnInit(): void {
+    this.userService
+    .get('api/user')
+    .subscribe(
+      (data: any) => {
+        this.users = data;
+      }
+    );
   }
 
-  child2(){
+  child2() {
     this.router.navigate([`/child2`]);
   }
 

@@ -1,3 +1,22 @@
 <p>child1 works!</p>
 
 <button (click)="child2()">Visit Child2</button>
+
+<table class="table table-hover">
+    <tr>
+        <th>name</th>
+        <th>email</th>
+        <th>mobileNumber</th>
+        <th>dob</th>
+        <th>gender</th>
+        <th>role</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.mobileNumber}}</td>
+        <td>{{user.dob}}</td>
+        <td>{{user.gender}}</td>
+        <td>{{user.role}}</td>
+    </tr>
+</table>
