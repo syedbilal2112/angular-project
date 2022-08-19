@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ActivatedRoute, Router } from "@angular/router";
+
 @Component({
   selector: 'app-child1',
   templateUrl: './child1.component.html',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Child1Component implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  child2(){
+    this.router.navigate([`/child2`]);
   }
 
 }
