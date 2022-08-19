@@ -1,1 +1,11 @@
 <p>child2 works!</p>
+<form class="form-group" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label>Enter Name<input type="text" class="form-control" formControlName="name" name="name"></label>
+    <label>Enter Email<input type="email" class="form-control" formControlName="email" name="email"></label>
+    <label>Enter Mobile Number<input type="number" class="form-control" formControlName="mobileNumber" name="mobileNumber"></label>
+    <label>Enter Password<input type="password" class="form-control" formControlName="password" name="password"></label>
+    <label>Enter DOB<input type="date" class="form-control" formControlName="dob" name="dob"></label>
+    <label>Enter Gender : <span>Male<input type="radio" class="form-control" formControlName="role" name="gender" value="Male"></span>
+        <span>Female<input type="radio" class="form-control" formControlName="role" name="gender" value="Female"></span></label>
+        <input type="submit">
+</form>

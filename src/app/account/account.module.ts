@@ -8,6 +8,7 @@ import { UserComponent } from './user/user.component';
 import { Child2Component } from './child2/child2.component';
 import { UserProfileService } from './user.service';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     Child1Component,
@@ -17,7 +18,8 @@ import { UserProfileService } from './user.service';
   imports: [
     CommonModule,
     HttpClientModule,
-    AccountRoutingModule
+    AccountRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     UserProfileService
